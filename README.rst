@@ -2,36 +2,36 @@
 ci_for_science
 ################################################################################
 
-A introduction to Continuous integration and continuous development for scientific applications
+A brief example of  Continuous integration for scientific applications, using miniconda_ and
+Python3.
 
+Overview
+********
+`Continuous Integration`_ (**CI**)  **CI** helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically as a result of a certain action
+taken in the source code (e.g. a push, pull-request, etc.).
 
-The project setup is documented in `a separate document <project_setup.rst>`_. Feel free to remove this document (and/or the link to this document) if you don't need it.
+_`Continuous Integration`: https://en.wikipedia.org/wiki/Continuous_integration
 
-Installation
-------------
+In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
+architecture, like installing the library from scratch in a Ubuntu machine.
 
-To install ci_for_science, do:
+GitHub actions
+**************
+The *Github actions* configuration can be found in the `.github/workflows/pythonapp.yml` file. There is comprehensive documentation of what are `Github actions`_ and how to use them.
 
-.. code-block:: console
+Travis CI
+*********
+The `.travis.yml` contains the configuration to call a **CI** workflow using the *Travis*. See `Travis tutorial`_.
 
-  git clone https://github.com//ci_for_science.git
-  cd ci_for_science
-  pip install .
+Gitlab CI
+*********
+The `.gitlab-ci.yml` contains the configuration to call a **CI** workflow using the *Gitlab CI*. A comprehensive documentation is available for the `GitLab CI`_ tool.
 
+Azure pipelines
+***************
+If you want to uze the `Azure pipelines`_ Have a look at `Tania Allard great tutorial`_.
 
-Run tests (including coverage) with:
-
-.. code-block:: console
-
-  python setup.py test
-
-
-Documentation
-*************
-
-.. _README:
-
-Include a link to your project's full documentation here.
+_`Azure pipelines`: https://azure.microsoft.com/en-us/services/devops/pipelines/
 
 Contributing
 ************
@@ -62,3 +62,9 @@ Credits
 *******
 
 This package was created with `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ and the `NLeSC/python-template <https://github.com/NLeSC/python-template>`_.
+
+.. _miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _`Github actions`: https://help.github.com/en/actions/automating-your-workflow-with-github-actions
+.. _`GitLab CI`: https://docs.gitlab.com/ee/ci/
+.. _`Tania Allard great tutorial`: https://github.com/trallard/ci-research
+.. _`Travis tutorial`: https://docs.travis-ci.com/user/tutorial/
