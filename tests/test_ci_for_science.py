@@ -1,28 +1,14 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-"""Tests for the ci_for_science module.
-"""
-import pytest
-
-from ci_for_science import ci_for_science
+"""Tests for the ci_for_science module."""
+from ci_for_science import compute_pi
 
 
-def test_something():
-    assert True
+def test_compute_pi():
+    """Check that the computation approximates pi."""
+    approx_pi = compute_pi(10000)
 
+    predicate_1 = approx_pi < 3.15
+    predicate_2 = approx_pi > 3.13
 
-def test_with_error():
-    with pytest.raises(ValueError):
-        # Do something that raises a ValueError
-        raise(ValueError)
-
-
-# Fixture example
-@pytest.fixture
-def an_object():
-    return {}
-
-
-def test_ci_for_science(an_object):
-    assert an_object == {}
+    assert predicate_1 and predicate_2
