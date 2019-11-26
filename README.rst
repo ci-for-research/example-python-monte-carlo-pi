@@ -15,7 +15,7 @@ In this repository there are stored 3 different configuration files for *Github 
 architecture, like installing the library from scratch in a Ubuntu machine.
 
 |octocat| GitHub actions
-**************
+************************
 The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what are `Github actions`_ and how to use them.
 
 .. |octocat| raw:: html
