@@ -20,9 +20,9 @@ The *Github actions* configuration can be found at `Python actions file <.github
 
 |Travis| Travis CI
 ******************
-.. |Travis| ..image: https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png
-
 The `Travis configuration file <.travis.yml>`_ contains the configuration to call a **CI** workflow using the *Travis*. See `Travis tutorial`_.
+
+.. |Travis| image:: https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png
 
 Gitlab CI
 *********
