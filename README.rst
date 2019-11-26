@@ -1,13 +1,12 @@
 ################################################################################
 Continuous Integration for Scientific Applications
 ################################################################################
-👩‍🚀 This repository contains a brief example of Continuous integration for scientific applications,
+👩‍🚀 📡 🔬 This repository contains a brief example of Continuous integration for scientific applications,
 using miniconda_ and Python3.
 
 Overview
 ********
-`Continuous Integration`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 
-  as a result of a certain action
+`Continuous Integration`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 🤖 as a result of a certain action
 taken in the source code (e.g. a push, pull-request, etc.).
 
 _`Continuous Integration`: https://en.wikipedia.org/wiki/Continuous_integration
@@ -41,9 +40,7 @@ The `GitLabCI configuration file <.gitlab-ci.yml>`_ contains the configuration t
 
 Azure pipelines
 ***************
-If you want to uze the `Azure pipelines`_ Have a look at `Tania Allard great tutorial`_.
-
-_`Azure pipelines`: https://azure.microsoft.com/en-us/services/devops/pipelines/
+If you want to uze the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard great tutorial`_.
 
 Contributing
 ************
