@@ -6,10 +6,8 @@ using miniconda_ and Python3.
 
 Overview
 ********
-`Continuous Integration`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 🤖 as a result of a certain action
+`Continuous Integration <https://en.wikipedia.org/wiki/Continuous_integration>`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 🤖 as a result of a certain action
 taken in the source code (e.g. a push, pull-request, etc.).
-
-_`Continuous Integration`: https://en.wikipedia.org/wiki/Continuous_integration
 
 In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
 architecture, like installing the library from scratch in a Ubuntu machine.
@@ -40,7 +38,7 @@ The `GitLabCI configuration file <.gitlab-ci.yml>`_ contains the configuration t
 
 Azure pipelines
 ***************
-If you want to uze the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard great tutorial`_.
+If you want to uze the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard's great tutorial`_.
 
 Contributing
 ************
