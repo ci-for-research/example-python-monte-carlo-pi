@@ -38,4 +38,5 @@ jobs:
       env:
         CONDA_PREFIX: /usr/share/miniconda
       run: |
+        pip install pytest pytest-cov
         pytest --cov=swan tests
