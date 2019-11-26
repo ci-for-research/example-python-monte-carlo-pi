@@ -14,9 +14,12 @@ _`Continuous Integration`: https://en.wikipedia.org/wiki/Continuous_integration
 In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
 architecture, like installing the library from scratch in a Ubuntu machine.
 
-GitHub actions
+|octocat| GitHub actions
 **************
 The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what are `Github actions`_ and how to use them.
+
+.. |octocat| raw:: html
+   <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40pt">
 
 |Travis| Travis CI
 ******************
@@ -26,9 +29,9 @@ The `Travis configuration file <.travis.yml>`_ contains the configuration to cal
 
    <img src="https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png" width="40pt">
 
-|gitlab| Gitlab CI
+|gitlab| GitLab CI
 *********
-The `GitlabCI configuration file <.gitlab-ci.yml>`_ contains the configuration to call a **CI** workflow using the *Gitlab CI*. A comprehensive documentation is available for the `GitLab CI`_ tool.
+The `GitLabCI configuration file <.gitlab-ci.yml>`_ contains the configuration to call a **CI** workflow using the *Gitlab CI*. A comprehensive documentation is available for the `GitLab CI`_ tool.
 
 .. |gitlab| raw:: html
 
