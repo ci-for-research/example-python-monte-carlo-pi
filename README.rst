@@ -18,7 +18,7 @@ GitHub actions
 **************
 The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what are `Github actions`_ and how to use them.
 
-Travis |Travis CI|
+|Travis| Travis CI
 ******************
 .. |Travis| ..image: https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png
 
