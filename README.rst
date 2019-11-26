@@ -30,7 +30,7 @@ The `Travis configuration file <.travis.yml>`_ contains the configuration to cal
 *********
 The `GitlabCI configuration file <.gitlab-ci.yml>`_ contains the configuration to call a **CI** workflow using the *Gitlab CI*. A comprehensive documentation is available for the `GitLab CI`_ tool.
 
-.. |gitlab| raw: html
+.. |gitlab| raw:: html
 
    <img src="https://about.gitlab.com/images/ci/gitlab-ci-cd-logo_2x.png" width="40pt">
 
