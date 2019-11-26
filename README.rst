@@ -6,7 +6,8 @@ using miniconda_ and Python3.
 
 Overview
 ********
-`Continuous Integration`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically as a result of a certain action
+`Continuous Integration`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 
+  as a result of a certain action
 taken in the source code (e.g. a push, pull-request, etc.).
 
 _`Continuous Integration`: https://en.wikipedia.org/wiki/Continuous_integration
