@@ -23,7 +23,9 @@ Travis CI
 |Travis| The `Travis configuration file <.travis.yml>`_ contains the configuration to call a **CI** workflow using the *Travis*. See `Travis tutorial`_.
 
 .. |Travis| image:: https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png
-            :alt: alternate text		    
+            :alt: alternate text
+            :scale: 20 %
+		  
 
 Gitlab CI
 *********
