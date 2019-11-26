@@ -24,7 +24,7 @@ Travis CI
 
 .. image:: https://travis-ci.com/images/logos/TravisCI-Mascot-pride-4.png
    :height: 100 px
-   : widht: 80 px
+   :widht: 80 px
    :align: left
 
 Gitlab CI
