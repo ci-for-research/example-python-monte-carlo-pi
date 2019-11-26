@@ -17,9 +17,9 @@ taken in the source code (e.g. a push, pull-request, etc.).
 In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
 architecture, like installing the library from scratch in a Ubuntu machine.
 
-========================
+########################
 Setting up a CI workflow
-========================
+########################
 
 |octocat| GitHub actions
 ************************
@@ -49,9 +49,9 @@ Azure pipelines
 ***************
 If you want to uze the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard's great tutorial`_.
 
-==================================
+##################################
 🚀 Running on your own infrascture
-==================================
+##################################
 Sometimes you want to have more control over the hardware infrascture, compilers, etc. when performing
 continuous integration. *GitHub Actions* and *GitLab CI/CD* allow you to set up your infrascture,
 the following links contains a guide to help you to run a **CI** workflow on your own infrascture:
