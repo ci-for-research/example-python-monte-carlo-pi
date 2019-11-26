@@ -2,6 +2,8 @@
     :target: https://travis-ci.com/NLESC-JCER/ci_for_science
 .. image:: https://github.com/NLESC-JCER/ci_for_science/workflows/build%20with%20conda/badge.svg
     :target: https://github.com/NLESC-JCER/ci_for_science/actions
+.. image:: https://gitlab.com/nlesc-jcer/ci_for_science/badges/master/pipeline.svg
+    :target: https://gitlab.com/nlesc-jcer/ci_for_science/badges/master/pipeline.svg
 
 ################################################################################
 Continuous Integration for Scientific Applications
