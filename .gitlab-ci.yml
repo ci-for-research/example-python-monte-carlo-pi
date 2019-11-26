@@ -20,5 +20,6 @@ job build:
     # Install your conda dependencies
     - conda install numpy
 
+    # Clone the repo and run the test
     - cd $HOME && git clone --branch devel --single-branch https://github.com/NLeSC/ci_for_science.git
     - cd ci_for_science && pip install -e .[test]
