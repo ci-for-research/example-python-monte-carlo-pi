@@ -19,6 +19,7 @@ architecture, like installing the library from scratch in a Ubuntu machine.
 The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what are `Github actions`_ and how to use them.
 
 .. |octocat| raw:: html
+
    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="40pt">
 
 |Travis| Travis CI
