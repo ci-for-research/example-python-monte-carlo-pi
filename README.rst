@@ -59,7 +59,7 @@ continuous integration. *GitHub Actions* and *GitLab CI/CD* allow you to set up 
 the following links contains a guide to help you to run a **CI** workflow on your own infrascture:
 
 - `GitLab CI/CD self-hosted runner <https://github.com/NLESC-JCER/gitlab_runner>`_
-- `GitHUb Actions self-hosted runnner <https://github.com/NLESC-JCER/linux_actions_runner>`_
+- `GitHub Actions self-hosted runnner <https://github.com/NLESC-JCER/linux_actions_runner>`_
 
 Contributing
 ************
