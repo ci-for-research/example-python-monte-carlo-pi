@@ -1,9 +1,8 @@
 ################################################################################
-ci_for_science
+:blue:`Continuous Integration for Scientific Applications`
 ################################################################################
-
-A brief example of  Continuous integration for scientific applications, using miniconda_ and
-Python3.
+👩‍🚀 This repository contains a brief example of Continuous integration for scientific applications,
+using miniconda_ and Python3.
 
 Overview
 ********
