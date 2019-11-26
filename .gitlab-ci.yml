@@ -1,9 +1,23 @@
 job build:
   image:
     "ubuntu:18.04"
+  variables:
+    PYTHON_VERSION: "3.7"
   script:
-    - cd $HOME && git clone --branch devel --single-branch https://github.com/NLeSC/ci_for_science.git   - cd swan && pip install -e .[test]
-    - pytest tests
-  tags:
-    # Optional tag for your own runner
-    - nlescRunner
+    - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+    - bash miniconda.sh -b -p $HOME/miniconda
+    - export PATH="$HOME/miniconda/bin:$PATH"
+    - hash -r
+    - conda config --set always_yes yes --set changeps1 no --set auto_update_conda False
+    # Useful for debugging any issues with conda
+    - conda info -a
+
+    # Install python env
+    - conda create --name ci_for_science python=${PYTHON_VERSION}
+    - source activate ci_for_science
+
+    # Install your conda dependencies
+    - conda install numpy
+
+    - cd $HOME && git clone --branch devel --single-branch https://github.com/NLeSC/ci_for_science.git
+    - cd ci_for_science && pip install -e .[test]
