@@ -27,7 +27,7 @@ install:
 
 # command to install dependencies
 install:
-  - pip install -e . -v
+  - pip install -e .
   - pip install pytest
 
 # command to run tests
