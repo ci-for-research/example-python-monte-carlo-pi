@@ -6,9 +6,9 @@
     :target: https://gitlab.com/nlesc-jcer/ci_for_science/badges/master/pipeline.svg
 
 ################################################################################
-Continuous Integration for Scientific Applications
+👩‍🚀 📡 🔬 Continuous Integration for Scientific Applications
 ################################################################################
-👩‍🚀 📡 🔬 This repository contains a brief example of Continuous integration for scientific applications,
+This repository contains a brief example of Continuous integration for scientific applications,
 using miniconda_ and Python3.
 
 Overview
@@ -19,9 +19,9 @@ taken in the source code (e.g. a push, pull-request, etc.).
 In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
 architecture, like installing the library from scratch in a Ubuntu machine.
 
-########################
-Setting up a CI workflow
-########################
+###########################
+🛠️ Setting up a CI workflow
+###########################
 
 |octocat| GitHub actions
 ************************
