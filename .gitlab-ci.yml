@@ -12,7 +12,6 @@ job build:
     - conda config --set always_yes yes --set changeps1 no --set auto_update_conda False
     # Useful for debugging any issues with conda
     - conda info -a
-
     # Install python env
     - conda create --name ci_for_science python=${PYTHON_VERSION}
     - source activate ci_for_science
