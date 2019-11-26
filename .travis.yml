@@ -19,15 +19,15 @@ install:
   - conda info -a
 
   # Install python env
-  - conda create --name namd python=${PYTHON_VERSION}
-  - source activate namd
+  - conda create --name ci_for_science python=${PYTHON_VERSION}
+  - source activate ci_for_science
 
   # Install your conda dependencies
   - conda install numpy
 
   # Install the package
   - pip install -e .
-  - pip install pytest
+  - pip install coverage pytest pytest-cov
 
 # command to run tests
 script:
