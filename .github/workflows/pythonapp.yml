@@ -17,10 +17,10 @@ jobs:
         conda-channels: anaconda, conda-forge
     - run: conda --version
     - run: which python
-    - run: conda install rdkit pytorch torchvision cpuonly -c pytorch
+    - run: conda numpy
 
     - name: Install the package
-      run: pip install .[test] -v
+      run: pip install -e .
       env:
         CONDA_PREFIX: /usr/share/miniconda
 
