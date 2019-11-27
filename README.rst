@@ -49,7 +49,7 @@ The `GitLabCI configuration file <.gitlab-ci.yml>`_ contains the configuration t
 
 Azure pipelines
 ***************
-If you want to use the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard's great tutorial https://github.com/trallard/ci-research`_.
+If you want to use the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard's great tutorial <https://github.com/trallard/ci-research>`_.
 
 ##################################
 🚀 Running on your own infrascture
