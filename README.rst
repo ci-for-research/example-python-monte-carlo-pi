@@ -69,8 +69,8 @@ This package contains a toy example to estimate the value of π using the [Monte
 To run the Monte Carlo calculator, you will need to
 
 1. Fork or clone this repo.
-2. install cython: ```pip install cython```
-3. install the library from the root folder:``` pip install -e .```
+2. install cython: `pip install cython`
+3. install the library from the root folder: `pip install -e .`
 4. run the command line interface like:
     ```
     run_simulation -n 1000
