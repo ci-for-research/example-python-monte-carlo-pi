@@ -67,13 +67,14 @@ the following links contains a guide to help you to run a **CI** workflow on you
 ###############################
 This package contains a toy example to estimate the value of π using the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method).
 To run the Monte Carlo calculator, you will need to
+
 1. Fork or clone this repo.
 2. install cython: ```pip install cython```
 3. install the library from the root folder:``` pip install -e .```
 4. run the command line interface like:
-```
-run_simulation -n 1000
-```
+    ```
+    run_simulation -n 1000
+    ```
 The previous command will estimate π using a 1000 points.
 
 
