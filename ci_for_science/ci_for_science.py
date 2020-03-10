@@ -22,12 +22,12 @@ def main():
     mode = args.mode
     # perform the simulation
     print(f'Do some awesome science in {mode}!')
-    if mode == "sequential":
+    if mode == "numpy":
         serial_pi = compute_pi(samples)
-        print(f"Pi Serial calculation: {serial_pi:0.8f}")
+        print(f"Pi Numpy calculation: {serial_pi:0.8f}")
     else:
         parallel_pi = compute_pi_cpp(samples)
-        print(f"Pi parallel calculation: {parallel_pi:0.8f}")
+        print(f"Pi C++ calculation: {parallel_pi:0.8f}")
 
 
 def compute_pi(samples: int) -> float:

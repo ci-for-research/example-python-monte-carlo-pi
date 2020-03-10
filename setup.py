@@ -135,7 +135,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'run_simulation=ci_for_science.ci_for_science:main',
+            'compute_pi=ci_for_science.ci_for_science:main',
         ]
     },
     extras_require={
