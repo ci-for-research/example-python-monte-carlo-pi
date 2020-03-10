@@ -16,8 +16,7 @@ Overview
 `Continuous Integration <https://en.wikipedia.org/wiki/Continuous_integration>`_ (**CI**) helps to automate the testing and delivery of scientific software tools. A **CI** is just a workflow that runs automatically 🤖 as a result of a certain action
 taken in the source code (e.g. a push, pull-request, etc.).
 
-In this repository there are stored 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI.*. These configuration files encodes the actions to perform with the code on a given
-architecture, like installing the library from scratch in a Ubuntu machine.
+This repository contains 3 different configuration files for *Github Actions*, *Travis* and *Gitlab CI*. These configuration files encode the actions to perform with the code on a given architecture, like installing the library from scratch in a Ubuntu machine.
 
 ###########################
 🛠️ Setting up a CI workflow
@@ -25,7 +24,7 @@ architecture, like installing the library from scratch in a Ubuntu machine.
 
 |octocat| GitHub actions
 ************************
-The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what are `Github actions`_ and how to use them.
+The *Github actions* configuration can be found at `Python actions file <.github/workflows/pythonapp.yml>`_. There is comprehensive documentation of what `Github actions`_ are and how to use them.
 
 .. |octocat| raw:: html
 
@@ -33,7 +32,7 @@ The *Github actions* configuration can be found at `Python actions file <.github
 
 |Travis| Travis CI
 ******************
-The `Travis configuration file <.travis.yml>`_ contains the configuration to call a **CI** workflow using the *Travis*. See `Travis tutorial`_.
+The `Travis configuration file <.travis.yml>`_ contains the configuration to call a **CI** workflow using *Travis*. See `Travis tutorial`_.
 
 .. |Travis| raw:: html
 
@@ -49,14 +48,14 @@ The `GitLabCI configuration file <.gitlab-ci.yml>`_ contains the configuration t
 
 Azure pipelines
 ***************
-If you want to use the `Azure pipelines <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ Have a look at `Tania Allard's great tutorial <https://github.com/trallard/ci-research>`_.
+If you want to use `Azure pipelines, <https://azure.microsoft.com/en-us/services/devops/pipelines/>`_ have a look at `Tania Allard's great tutorial <https://github.com/trallard/ci-research>`_.
 
 ##################################
 🚀 Running on your own infrascture
 ##################################
 Sometimes you want to have more control over the hardware infrascture, compilers, etc. when performing
-continuous integration. *GitHub Actions* and *GitLab CI/CD* allow you to set up your infrascture,
-the following links contains a guide to help you to run a **CI** workflow on your own infrascture:
+continuous integration. *GitHub Actions* and *GitLab CI/CD* allow you to set up your infrascture.
+The following links contains a guide to help you run a **CI** workflow on your own infrascture:
 
 - `GitLab CI/CD self-hosted runner <https://github.com/NLESC-JCER/gitlab_runner>`_
 - `GitHub Actions self-hosted runnner <https://github.com/NLESC-JCER/linux_actions_runner>`_
@@ -65,7 +64,7 @@ the following links contains a guide to help you to run a **CI** workflow on you
 ###############################
 🦄 Running the package examples
 ###############################
-This package contains a toy example to estimate the value of π using the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method).
+This package contains a toy example to estimate the value of π using the `Monte Carlo method`_.
 To run the Monte Carlo calculator, you will need to
 
 1. Fork or clone this repo.
@@ -74,8 +73,8 @@ To run the Monte Carlo calculator, you will need to
 3. install the library from the root folder:
     ``pip install -e .``
 4. run the command line interface like:
-    ``run_simulation -n 1000``
-The previous command will estimate π using a 1000 points.
+    ``compute_pi -n 1000``
+The previous command will estimate π using 1000 random points.
 
 Contributing
 ************
@@ -112,3 +111,4 @@ This package was created with `Cookiecutter <https://github.com/audreyr/cookiecu
 .. _`GitLab CI`: https://docs.gitlab.com/ee/ci/
 .. _`Tania Allard great tutorial`: https://github.com/trallard/ci-research
 .. _`Travis tutorial`: https://docs.travis-ci.com/user/tutorial/
+.. _`Monte Carlo method`: https://en.wikipedia.org/wiki/Monte_Carlo_method
