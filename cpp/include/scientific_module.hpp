@@ -3,10 +3,6 @@
 #include <pybind11/pybind11.h>
 #include <vector>
 
-#if defined(_OPENMP)
-#include <omp.h>
-#endif
-
 double compute_pi_parallel(int samples);
 std::vector<double> create_random_vector(int samples);
 

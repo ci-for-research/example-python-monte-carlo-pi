@@ -23,9 +23,23 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CXX_FLAGS)
     "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel." FORCE)
 endif(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CXX_FLAGS)
 
-# Search for Cuda
+###############################################################################
+# dependencies
+###############################################################################
+
+
+# Search for pybind11
 find_package(pybind11 REQUIRED)
 
+find_package(OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
+
+###############################################################################
+# targets
+###############################################################################
 add_library(scientific_module scientific_module)
 
 target_include_directories(scientific_module

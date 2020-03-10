@@ -74,8 +74,6 @@ class BuildExt(build_ext):
         opts.append('-DVERSION_INFO="%s"' %
                     self.distribution.get_version())
         opts.append(cpp_flag(self.compiler))
-        if has_flag(self.compiler, '-fopenmp'):
-            opts.append('-fopenmp')
 
         for ext in self.extensions:
             ext.extra_compile_args = opts

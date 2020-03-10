@@ -2,7 +2,7 @@
 
 """Tests for the ci_for_science module."""
 from ci_for_science import compute_pi
-from compute_pi_cpp import compute_pi_parallel
+from compute_pi_cpp import compute_pi_cpp
 
 
 def test_serial_pi():
@@ -12,7 +12,7 @@ def test_serial_pi():
 
 def test_parallel_pi():
     """Check the serial implentation."""
-    call_montecarlo(compute_pi_parallel)
+    call_montecarlo(compute_pi_cpp)
 
 
 def call_montecarlo(function: callable, samples: int = 100000):

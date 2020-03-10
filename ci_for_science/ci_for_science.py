@@ -2,7 +2,7 @@
 
 import argparse
 import numpy as np
-from compute_pi_cpp import compute_pi_parallel
+from compute_pi_cpp import compute_pi_cpp
 
 __all__ = ["compute_pi"]
 
@@ -10,6 +10,8 @@ parser = argparse.ArgumentParser(
     description="run_simulation -n number_of_samples")
 parser.add_argument('-n', '--number', required=True, type=int,
                     help="Number of samples")
+parser.add_argument(
+    '-m', '--mode', choices=["numpy", "cpp"], default="numpy")
 
 
 def main():
@@ -17,12 +19,15 @@ def main():
     # read the command line arguments
     args = parser.parse_args()
     samples = args.number
+    mode = args.mode
     # perform the simulation
-    print('Do some awesome science')
-    serial_pi = compute_pi(samples)
-    parallel_pi = compute_pi_parallel(samples)
-    print(f"{serial_pi:0.8f}")
-    print(f"{parallel_pi:0.8f}")
+    print(f'Do some awesome science in {mode}!')
+    if mode == "sequential":
+        serial_pi = compute_pi(samples)
+        print(f"Pi Serial calculation: {serial_pi:0.8f}")
+    else:
+        parallel_pi = compute_pi_cpp(samples)
+        print(f"Pi parallel calculation: {parallel_pi:0.8f}")
 
 
 def compute_pi(samples: int) -> float:

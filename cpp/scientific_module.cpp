@@ -1,10 +1,13 @@
 #include "scientific_module.hpp"
 #include <algorithm>
+#include <iostream>
 #include <math.h>
+#include <omp.h>
 #include <random>
+#include <thread>
 namespace py = pybind11;
 
-double compute_pi_parallel(int samples) {
+double compute_pi_cpp(int samples) {
   // Take random x and y cartesian coordinates
 
   auto xs = create_random_vector(samples);
@@ -36,8 +39,8 @@ std::vector<double> create_random_vector(int samples) {
 PYBIND11_MODULE(compute_pi_cpp, m) {
   m.doc() = "Compute the pi number using the Monte Carlo method";
 
-  m.def("compute_pi_parallel", &compute_pi_parallel,
-        R"pdoc(Compute pi in parallel
+  m.def("compute_pi_cpp", &compute_pi_cpp,
+        R"pdoc(Compute pi using the Monte Carlo method
      
             Args:
                samples (int): Number of samples
