@@ -4,7 +4,7 @@ job build:
   variables:
     PYTHON_VERSION: "3.7"
   script:
-    - apt-get update && apt-get install -y wget git
+    - apt-get update && apt-get install -y wget git build-essential
     - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
     - bash miniconda.sh -b -p $HOME/miniconda
     - export PATH="$HOME/miniconda/bin:$PATH"
