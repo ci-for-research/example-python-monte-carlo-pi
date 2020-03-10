@@ -70,11 +70,17 @@ To run the Monte Carlo calculator, you will need to
 
 1. Fork or clone this repo.
 2. install cython:
-    ```pip install cython```
+    ```shell
+    pip install cython
+    ```
 3. install the library from the root folder:
-    ```pip install -e .````
+    ```shell
+    pip install -e .
+    ```
 4. run the command line interface like:
-    ```run_simulation -n 1000```
+    ```shell
+    run_simulation -n 1000
+    ```
 The previous command will estimate π using a 1000 points.
 
 
