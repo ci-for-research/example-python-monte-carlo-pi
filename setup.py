@@ -121,7 +121,7 @@ setup(
     test_suite='tests',
     cmdclass={'build_ext': BuildExt},
     ext_modules=[ext_pybind],
-    install_requires=["numpy", "pybind11>=2.2.4"],
+    install_requires=["cython", "numpy", "pybind11>=2.2.4"],
     setup_requires=[
         # dependency for `python setup.py test`
         'pytest-runner',
