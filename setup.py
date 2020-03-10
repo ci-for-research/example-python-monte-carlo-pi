@@ -1,8 +1,10 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import os
 
-from setuptools import setup
+import setuptools
+from setuptools import Extension, setup
+
+from Cython.Distutils import build_ext
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -13,6 +15,82 @@ with open(os.path.join(here, 'ci_for_science', '__version__.py')) as f:
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
+
+
+def has_flag(compiler, flagname):
+    """Return a boolean indicating whether a flag name is supported on the specified compiler.
+
+    As of Python 3.6, CCompiler has a `has_flag` method.
+    http: // bugs.python.org/issue26689
+    """
+    import tempfile
+    with tempfile.NamedTemporaryFile('w', suffix='.cc') as f:
+        f.write('int main (int argc, char **argv) { return 0; }')
+        try:
+            compiler.compile([f.name], extra_postargs=[flagname])
+        except setuptools.distutils.errors.CompileError:
+            return False
+    return True
+
+
+def cpp_flag(compiler):
+    """Return the -std=c++[11/14/17] compiler flag.
+
+    The c++17 is prefered over c++14 and c++11 (when it is available).
+    """
+    if has_flag(compiler, '-std=c++17'):
+        return '-std=c++17'
+    elif has_flag(compiler, '-std=c++14'):
+        return '-std=c++14'
+    elif has_flag(compiler, '-std=c++11'):
+        return '-std=c++11'
+    else:
+        raise RuntimeError('Unsupported compiler -- at least C++11 support '
+                           'is needed!')
+
+
+class get_pybind_include:
+    """Helper class to determine the pybind11 include path.
+
+    The purpose of this class is to postpone importing pybind11
+    until it is actually installed, so that the ``get_include()``
+    method can be invoked.
+    """
+
+    def __init__(self, user=False):
+        self.user = user
+
+    def __str__(self):
+        import pybind11
+        return pybind11.get_include(self.user)
+
+
+class BuildExt(build_ext):
+    """A custom build extension for adding compiler-specific options."""
+
+    def build_extensions(self):
+        """Call the funcionality to compile the extension."""
+        opts = []
+        opts.append('-DVERSION_INFO="%s"' %
+                    self.distribution.get_version())
+        opts.append(cpp_flag(self.compiler))
+
+        for ext in self.extensions:
+            ext.extra_compile_args = opts
+        build_ext.build_extensions(self)
+
+
+ext_pybind = Extension(
+    'compute_pi_cpp',
+    sources=['cpp/scientific_module.cpp'],
+    include_dirs=[
+        "cpp/include",
+        # Path to pybind11 headers
+        get_pybind_include(),
+        get_pybind_include(user=True),
+    ],
+    language='c++')
+
 
 setup(
     name='ci_for_science',
@@ -30,17 +108,18 @@ setup(
     zip_safe=False,
     keywords='ci_for_science',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
     test_suite='tests',
-    install_requires=[],  # FIXME: add your package's dependencies to this list
+    cmdclass={'build_ext': BuildExt},
+    ext_modules=[ext_pybind],
+    install_requires=["cython", "numpy", "pybind11>=2.2.4"],
     setup_requires=[
         # dependency for `python setup.py test`
         'pytest-runner',
@@ -54,7 +133,12 @@ setup(
         'pytest-cov',
         'pycodestyle',
     ],
+    entry_points={
+        'console_scripts': [
+            'run_simulation=ci_for_science.ci_for_science:main',
+        ]
+    },
     extras_require={
-        'dev':  ['prospector[with_pyroma]', 'yapf', 'isort'],
+        'test': ['coverage', 'pytest>=3.9', 'pytest-cov', 'pycodestyle', 'codacy-coverage'],
     }
 )

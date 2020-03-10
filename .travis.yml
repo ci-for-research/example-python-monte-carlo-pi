@@ -23,7 +23,7 @@ install:
   - source activate ci_for_science
 
   # Install your conda dependencies
-  - conda install numpy
+  - conda install numpy cython
 
   # Install the package
   - pip install -e .
