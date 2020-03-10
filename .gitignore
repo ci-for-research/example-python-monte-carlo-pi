@@ -30,3 +30,6 @@ docs/apidocs
 # build
 bin
 build
+
+# share objects
+*.so

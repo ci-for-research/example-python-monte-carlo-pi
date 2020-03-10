@@ -34,11 +34,13 @@ def has_flag(compiler, flagname):
 
 
 def cpp_flag(compiler):
-    """Return the -std=c++[11/14] compiler flag.
+    """Return the -std=c++[11/14/17] compiler flag.
 
-    The c++14 is prefered over c++11 (when it is available).
+    The c++17 is prefered over c++14 and c++11 (when it is available).
     """
-    if has_flag(compiler, '-std=c++14'):
+    if has_flag(compiler, '-std=c++17'):
+        return '-std=c++17'
+    elif has_flag(compiler, '-std=c++14'):
         return '-std=c++14'
     elif has_flag(compiler, '-std=c++11'):
         return '-std=c++11'
@@ -115,7 +117,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8'
     ],
     test_suite='tests',
     cmdclass={'build_ext': BuildExt},
@@ -134,9 +135,6 @@ setup(
         'pytest-cov',
         'pycodestyle',
     ],
-    extras_require={
-        'dev': ['prospector[with_pyroma]', 'yapf', 'isort'],
-    },
     entry_points={
         'console_scripts': [
             'run_simulation=ci_for_science.ci_for_science:main',
