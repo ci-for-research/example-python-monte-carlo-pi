@@ -140,5 +140,7 @@ setup(
             'run_simulation=ci_for_science.ci_for_science:main',
         ]
     },
-
+    extras_require={
+        'test': ['coverage', 'pytest>=3.9', 'pytest-cov', 'pycodestyle', 'codacy-coverage'],
+    }
 )

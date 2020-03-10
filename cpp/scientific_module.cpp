@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <math.h>
 #include <random>
+namespace py = pybind11;
 
 double compute_pi_parallel(int samples) {
   // Take random x and y cartesian coordinates
@@ -35,5 +36,11 @@ std::vector<double> create_random_vector(int samples) {
 PYBIND11_MODULE(compute_pi_cpp, m) {
   m.doc() = "Compute the pi number using the Monte Carlo method";
 
-  m.def("compute_pi_parallel", &compute_pi_parallel);
+  m.def("compute_pi_parallel", &compute_pi_parallel,
+        R"pdoc(Compute pi in parallel
+     
+            Args:
+               samples (int): Number of samples
+       )pdoc",
+        py::arg("samples"));
 }
