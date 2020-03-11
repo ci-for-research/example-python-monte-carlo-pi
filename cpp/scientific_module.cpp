@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <iostream>
 #include <math.h>
-#include <omp.h>
 #include <random>
 #include <thread>
 namespace py = pybind11;
