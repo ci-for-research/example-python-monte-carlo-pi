@@ -65,14 +65,23 @@ The following links contains a guide to help you run a **CI** workflow on your o
 🎮 Running the package examples
 ###############################
 This package contains a toy example to estimate the value of π using the `Monte Carlo method`_.
-To run the Monte Carlo calculator, you will need to
+To run the Monte Carlo calculator, you will need to have python install. We recommend you
+create a `conda virtual environment <https://docs.conda.io/projects/conda/en/latest/index.html>`_ by following the instructions below,
 
-1. Fork or clone this repo.
-2. install cython:
+1. Get a copy of `miniconda <https://docs.conda.io/en/latest/miniconda.html>`_
+2. Create a new environment by running the following command:
+    ``conda create --name ci_for_science python=3.7 -y -q``
+3. Activate the environment:
+    ``conda activate ci_for_science``
+
+Now to install this package,
+
+4. `Fork and clone this repo <https://help.github.com/en/github/getting-started-with-github/fork-a-repo>`_
+5. install cython:
     ``pip install cython``
-3. install the library from the root folder:
+6. install the library from the root folder:
     ``pip install -e .``
-4. run the command line interface like:
+7. run the command line interface like:
     ``compute_pi -n 1000``
 The previous command will estimate π using 1000 random points.
 
