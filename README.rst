@@ -79,8 +79,8 @@ Now to install this package,
 4. `Fork and clone this repo <https://help.github.com/en/github/getting-started-with-github/fork-a-repo>`_
 5. install cython:
     ``pip install cython``
-6. install the library from the root folder:
-    ``pip install -e .``
+6. install the library from the repo root folder:
+    ``cd ci_for_science && pip install -e .``
 7. run the command line interface like:
     ``compute_pi -n 1000``
 The previous command will estimate π using 1000 random points.
