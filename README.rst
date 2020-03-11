@@ -62,7 +62,7 @@ The following links contains a guide to help you run a **CI** workflow on your o
 
 
 ###############################
-🦄 Running the package examples
+🎮 Running the package examples
 ###############################
 This package contains a toy example to estimate the value of π using the `Monte Carlo method`_.
 To run the Monte Carlo calculator, you will need to
